@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Charan Anala Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  background:linear-gradient(-45deg,#ff6ec7,#ffd700,#00f0ff,#ff4500,#8a2be2);
+  background-size:400% 400%;
+  animation:bg 12s ease infinite;
+  scroll-behavior:smooth;
+}
+@keyframes bg{
+  0%{background-position:0 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0 50%;}
+}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(0,0,0,0.5);
+  text-align:center;padding:15px;
+}
+nav a{
+  color:#fff;text-decoration:none;
+  margin:0 15px;font-weight:bold;position:relative;
+}
+nav a::after{
+  content:'';position:absolute;bottom:-5px;left:0;
+  width:0;height:2px;background:#fff;transition:.3s;
+}
+nav a:hover::after{width:100%;}
+section{padding:60px 20px;text-align:center;max-width:900px;margin:auto;}
+.intro-section{
+  height:90vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+}
+.intro-title{font-size:3rem;animation:fadeDown 1.5s;}
+.intro-subtitle{
+  font-size:1.6rem;color:#ff0;margin-top:15px;
+  opacity:0;animation:fadeUp 1.5s .5s forwards;
+}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-30px);}to{opacity:1;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;}}
+.profile-image{
+  width:160px;height:160px;border-radius:50%;
+  margin:20px auto;display:block;
+  background:linear-gradient(135deg,#ff6ec7,#1e90ff,#ffd700);
+  padding:5px;box-shadow:0 5px 20px rgba(0,0,0,.5);
+  transition:.5s;
+}
+.profile-image:hover{transform:scale(1.08);}
+.skill-section,.project-section{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:25px;
+}
+.skill-badge{
+  background:rgba(255,255,255,.2);
+  padding:15px 25px;border-radius:30px;
+  font-weight:bold;transition:.3s;
+}
+.skill-badge:hover{
+  background:linear-gradient(135deg,#ff6ec7,#1e90ff,#ffd700);
+  color:#000;transform:scale(1.1);
+}
+.project-card{
+  width:250px;background:rgba(255,255,255,.15);
+  border-radius:15px;padding:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.4);
+  transition:.4s;
+}
+.project-card:hover{
+  transform:scale(1.05);
+  background:linear-gradient(135deg,#ff6ec7,#1e90ff,#ffd700);
+  color:#000;
+}
+.project-link{
+  display:inline-block;margin-top:10px;
+  background:rgba(255,255,255,.25);
+  padding:8px 15px;border-radius:20px;
+  text-decoration:none;color:#fff;font-size:.9rem;
+}
+.project-link:hover{background:#fff;color:#000;}
+.contact-form{
+  display:flex;flex-direction:column;gap:15px;
+  max-width:400px;margin:30px auto;
+  background:rgba(255,255,255,.1);
+  padding:25px;border-radius:15px;
+}
+.contact-form label{text-align:left;}
+.contact-form span{color:#ffeb3b;font-weight:500;}
+.contact-form input{
+  padding:10px;border:none;border-radius:8px;
+  background:rgba(255,255,255,.2);color:#fff;
+}
+footer{
+  background:rgba(0,0,0,.5);
+  text-align:center;padding:15px;
+}
+@media(max-width:600px){
+  .intro-title{font-size:2.2rem;}
+  .intro-subtitle{font-size:1.2rem;}
+  .skill-badge{font-size:1rem;padding:10px 20px;}
+  .project-card{width:90%;}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#intro-section">Home</a>
+    <a href="#profile-section">About</a>
+    <a href="#skill-section">Skills</a>
+    <a href="#project-section">Projects</a>
+    <a href="#contact-section">Contact</a>
+  </nav>
+</header>
+<section id="intro-section" class="intro-section">
+  <h1 class="intro-title">Hello, I'm Sai Charan Anala</h1>
+  <h2 class="intro-subtitle">Creative Web Designer & Developer</h2>
+</section>
+
+<section id="profile-section">
+  <h2>About Me</h2>
+  <img src="sai charan.jpg" alt="Sai Charan" class="profile-image">
+  <p>I am Sai Charan Anala from Andhra Pradesh, a passionate coder at Scaler School of Technology who loves creating and learning.</p>
+</section>
+<section id="skill-section" class="skill-section">
+  <h2>My Skills</h2>
+  <div class="skill-badge">HTML</div>
+  <div class="skill-badge">CSS</div>
+  <div class="skill-badge">Java</div>
+  <div class="skill-badge">Python</div>
+</section>
+<section id="project-section" class="project-section">
+  <h2>Projects</h2>
+  <div class="project-card">
+    Portfolio Website
+    <a href="#" class="project-link">View on GitHub</a>
+  </div>
+</section>
+<section id="contact-section">
+  <h2>Contact Me</h2>
+  <form class="contact-form">
+    <label><span>Name</span><input type="text" value="Sai Charan Anala" readonly></label>
+    <label><span>Email</span><input type="email" value="analacharan5@gmail.com" readonly></label>
+    <label><span>Mobile</span><input type="text" value="1234567890" readonly></label>
+  </form>
+</section>
+<footer>
+  <p>© 2025 Sai Charan Anala | HTML & CSS only</p>
+</footer>
+</body>
+</html>
